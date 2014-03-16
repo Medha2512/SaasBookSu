@@ -1,0 +1,9 @@
+%h1 Create A New Movie
+= form_tag movies_path, :method => :post do
+  = render :partial => 'movie_form'
+  = submit_tag 'Save Changes'
+%br/
+%br/
+= link_to 'Back to movie list', movies_path
+
+

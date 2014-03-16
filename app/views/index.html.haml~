@@ -1,11 +1,11 @@
 %h1 All Movies
-
+ 
 %table#movies
   %thead
     %tr
-      %th= link_to "Movie Title", :sort => "title"
-      %th= link_to "Rating", :sort => "rating"
-      %th= link_to "Release Date", :sort => "release_date"
+      %th Movie Title
+      %th Rating
+      %th Release Date
       %th Movie Details
   %tbody
     - @movies.each do |movie|
@@ -14,5 +14,3 @@
         %td= movie.rating
         %td= movie.release_date
         %td= link_to "Click to see the details of \"#{movie.title}\" ...", movie_path(movie)
-        
-= link_to "Add new movie", new_movie_path
